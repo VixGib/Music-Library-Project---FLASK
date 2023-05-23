@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block body_content %}
+<h2>Album Name & Year</h2>
+<div class="error_message">{{message}}</div>
+<div>
+    <table>
+       <tr>
+           <th>Album Year</th>
+           <th>Album Name</th>
+
+       </tr>
+        {% for alb in albums %}
+        <tr>
+           <td>{{alb.album_year}}</td>
+            <td>{{alb.album_name}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
+{% block footer_content %}
+<footer>
+     &copy; 2023 Team 3
+</footer>
+{% endblock %}
+
+
+

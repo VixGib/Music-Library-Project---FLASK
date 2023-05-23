@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body_content %}
+<h2>Artist's Name</h2>
+<div class="error_message">{{message}}</div>
+
+<div>
+{% for art in artists %}
+    {% if art.first_name == art.last_name %}
+   <p><b>Artist Name:</b> {{art.first_name}} </p>
+    {% else %}
+    <p><b>Artist Name:</b> {{art.first_name}} {{art.last_name}} </p>
+    {% endif %}
+{% endfor %}
+
+    <br>
+    {{ message }}
+</div>
+{% endblock %}
+{% block footer_content %}
+<footer>
+     &copy; 2023 Team 3
+</footer>
+{% endblock %}
